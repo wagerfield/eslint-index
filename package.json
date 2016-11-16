@@ -1,0 +1,28 @@
+{
+  "name": "eslint-index",
+  "version": "0.0.0-semantically-released",
+  "description": "CLI for finding and managing rules in ESLint config files",
+  "author": "Matthew Wagerfield <matthew@wagerfield.com>",
+  "license": "MIT",
+  "main": "bin/index.js",
+  "bin": {
+    "eslint-index": "bin/index.js"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wagerfield/eslint-index.git"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "cli-table2": "^0.2.0",
+    "eslint": "^3.9.1",
+    "lodash": "^4.16.6",
+    "yargs": "^6.3.0"
+  },
+  "devDependencies": {
+    "semantic-release": "^4.3.5"
+  }
+}
