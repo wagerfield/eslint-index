@@ -1,6 +1,6 @@
 {
   "name": "eslint-index",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "CLI for finding and managing rules in ESLint config files",
   "author": "Matthew Wagerfield <matthew@wagerfield.com>",
   "license": "MIT",
