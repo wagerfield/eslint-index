@@ -16,13 +16,13 @@ eslint-index path/to/.eslintrc [options]
 
 ## Options
 
-Option      | Alias | Type            | Options                  | Description
-------------|-------|-----------------|--------------------------|-------------
-`--help`    | `-h`  | `N/A`           | `N/A`                    | Display help
-`--format`  | `-f`  | `String`        | `list|table|count`       | Format rules as `list`, `table` or `count`
-`--groups`  | `-g`  | `Array<String>` | `eslint|plugin`          | Filter rules by group/plugin
-`--status`  | `-s`  | `Array<String>` | `omitted|off|warn|error` | Filter rules by status
-`--exclude` | `-e`  | `Array<String>` | `some-rule-ids`          | Exclude rules from the output
+Option      | Alias | Type            | Options                   | Description
+------------|-------|-----------------|---------------------------|-------------
+`--help`    | `-h`  | `N/A`           | `N/A`                     | Display help
+`--format`  | `-f`  | `String`        | `list|table|count`        | Format rules
+`--status`  | `-s`  | `Array<String>` | `omitted|off|warn|error`  | Filter rules by status
+`--groups`  | `-g`  | `Array<String>` | `eslint|plugin eg. react` | Filter rules by group/plugin
+`--exclude` | `-e`  | `Array<String>` | `rule-id-one rule-id-two` | Exclude rules from output
 
 ## Examples
 
