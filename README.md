@@ -16,12 +16,12 @@ eslint-index path/to/.eslintrc [options]
 
 ## Options
 
-Option      | Alias | Type            | Options                  | Description
-------------|-------|-----------------|--------------------------|-------------
-`--format`  | `-f`  | `String`        | `list|table|count`       | Format the rules as a `list`, `table` or `count`
-`--groups`  | `-g`  | `Array<String>` | `eslint|plugin`          | Filter rules by group/plugin such as `eslint`, `react`, `import` etc.
-`--status`  | `-s`  | `Array<String>` | `omitted|off|warn|error` | Filter rules by their status such as `omitted`, `off`, `warn` or `error`
-`--exclude` | `-e`  | `Array<String>` | `some-rule-ids`          | Exclude rules from the output (can include paths to JS modules that export an array of rule ids)
+Option      | Type            | Options                   | Description
+------------|-----------------|---------------------------|-------------
+`--format`  | `String`        | `list|table|count`        | Format the rules as a `list`, `table` or `count`
+`--groups`  | `Array<String>` | `eslint|plugin`           | Filter rules by group/plugin such as `eslint`, `react`, `import` etc.
+`--status`  | `Array<String>` | `omitted|off|warn|error`  | Filter rules by their status such as `omitted`, `off`, `warn` or `error`
+`--exclude` | `Array<String>` | `rule-id-one rule-id-two` | Exclude rules from the output (can include paths to JS modules that export an array of rule ids)
 
 ## Examples
 
