@@ -11,7 +11,8 @@
   "scripts": {
     "update-patch": "npm version patch",
     "update-minor": "npm version minor",
-    "update-major": "npm version major"
+    "update-major": "npm version major",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,11 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "cli-table2": "^0.2.0",
-    "eslint": "^3.9.1",
+    "eslint": "^3.10.2",
     "lodash": "^4.16.6",
     "yargs": "^6.3.0"
+  },
+  "devDependencies": {
+    "eslint-config-supermind": "^0.2.0"
   }
 }
