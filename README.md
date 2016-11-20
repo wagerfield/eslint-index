@@ -34,6 +34,7 @@ eslint-index .eslintrc --status warn error
 eslint-index .eslintrc --groups eslint react
 eslint-index .eslintrc --groups eslint --status warn error
 eslint-index .eslintrc --groups eslint --status warn error --format count
+eslint-index .eslintrc --exclude semi curly
 ```
 
 ## Author
