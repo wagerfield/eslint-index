@@ -14,6 +14,7 @@ const argv = yargs.usage('Usage: $0 <file> [options]')
   .example('$0 .eslintrc --groups eslint react', 'List all available rules for "eslint" and "react"')
   .example('$0 .eslintrc --status omitted off', 'List rules that have been turned "off" or "omitted"')
   .example('$0 .eslintrc --exclude curly semi', 'List all available rules excluding "curly" and "semi"')
+  .example('$0 .eslintrc --docs', 'Display links to rule docs alongside each rule')
   .demand(1, '.eslintrc config file required')
   .check((args) => {
     const file = _.first(args._)
@@ -42,6 +43,11 @@ const argv = yargs.usage('Usage: $0 <file> [options]')
       type: 'array',
       choices: Constants.STATUS_KEYS,
       description: 'Filter rules by status such as "omitted" or "error"'
+    },
+    docs: {
+      alias: 'd',
+      type: 'boolean',
+      description: 'Display links to rule docs alongside each rule'
     },
     exclude: {
       alias: 'e',
@@ -74,5 +80,6 @@ module.exports = {
   exclude: argv.exclude,
   groups: argv.groups,
   status: argv.status,
-  format: argv.format
+  format: argv.format,
+  docs: argv.docs
 }

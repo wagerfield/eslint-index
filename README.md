@@ -18,7 +18,8 @@ eslint-index path/to/.eslintrc [options]
 
 Option      | Alias | Description                  | Arg Type        | Arg Options
 ------------|-------|------------------------------|-----------------|------------
-`--help`    | `-h`  | Display help                 | `N/A`           | `N/A`
+`--help`    | `-h`  | Display help                 | `Boolean`       | `N/A`
+`--docs`    | `-d`  | Display docs alongside rules | `Boolean`       | `N/A`
 `--format`  | `-f`  | Format rules                 | `String`        | `list|table|count`
 `--status`  | `-s`  | Filter rules by status       | `Array<String>` | `omitted|off|warn|error`
 `--groups`  | `-g`  | Filter rules by group/plugin | `Array<String>` | `eslint|plugin eg. react`
@@ -35,6 +36,8 @@ eslint-index .eslintrc --groups eslint react
 eslint-index .eslintrc --groups eslint --status warn error
 eslint-index .eslintrc --groups eslint --status warn error --format count
 eslint-index .eslintrc --exclude semi curly
+eslint-index .eslintrc --docs
+eslint-index .eslintrc --docs --groups eslint react
 ```
 
 ## Author

@@ -2,6 +2,7 @@ const _ = require('lodash')
 const chalk = require('chalk')
 const Table = require('cli-table2')
 const Constants = require('./constants')
+const Docs = require('./docs')
 
 function formatColor(value, status) {
   const color = Constants.STATUS_COLORS[status]
@@ -13,8 +14,18 @@ function formatKey(key, prefix) {
   return [ prefix ].concat(labels).join(' ')
 }
 
-function formatList(rules) {
-  return rules.map(rule => formatColor(rule.id, rule.status)).join('\n')
+function formatList(rules, showDocs) {
+  let ruleDocsUrl = '', formattedRule = ''
+  const maxRuleIdLength = _.maxBy(rules, rule => rule.id.length).id.length
+  return rules.map((rule) => {
+    formattedRule = _.padEnd(rule.id, maxRuleIdLength)
+    formattedRule = formatColor(formattedRule, rule.status)
+    if (showDocs) {
+      ruleDocsUrl = chalk.gray(Docs.getRuleDocsUrl(rule))
+      formattedRule = `${formattedRule} ${ruleDocsUrl}`
+    }
+    return formattedRule
+  }).join('\n')
 }
 
 function formatCount(rules) {

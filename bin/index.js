@@ -36,6 +36,6 @@ switch (Args.format) {
     break
   default:
     console.log(Formatter.formatKey(Constants.STATUS_COLORS, 'key:'))
-    console.log(Formatter.formatList(filteredRules))
+    console.log(Formatter.formatList(filteredRules, Args.docs))
     break
 }
