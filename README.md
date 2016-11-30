@@ -2,6 +2,9 @@
 
 > CLI for finding and managing rules in ESLint config files
 
+![Demo 1][demo-1]
+![Demo 2][demo-2]
+
 ## Installation
 
 ```bash
@@ -86,3 +89,5 @@ Matthew Wagerfield [@wagerfield](http://twitter.com/wagerfield)
 
 
 [eslint-logo]: assets/eslint-logo.png
+[demo-1]: assets/demo-1.gif
+[demo-2]: assets/demo-2.gif
