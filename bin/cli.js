@@ -7,6 +7,24 @@ const _ = require('lodash')
 const yargs = require('yargs')
 const Constants = require('./constants')
 
+function coerceRules(rules) {
+  const parsedRules = rules.map((rule) => {
+    if (rule.endsWith('.js')) {
+      const file = path.resolve(rule)
+      const stats = fs.statSync(file)
+      if (stats && stats.isFile()) {
+        const module = require(file)
+        return _.isArray(module) || _.isString(module) ? module : rule
+      } else {
+        return rule
+      }
+    } else {
+      return rule
+    }
+  })
+  return _.uniq(_.flatten(parsedRules))
+}
+
 const argv = yargs.usage('Usage: $0 <file> [options]')
   .example('$0 .eslintrc', 'List all available rules')
   .example('$0 .eslintrc --format count', 'Output the number of rules')
@@ -49,24 +67,17 @@ const argv = yargs.usage('Usage: $0 <file> [options]')
       type: 'boolean',
       description: 'Display links to rule docs alongside each rule'
     },
+    include: {
+      alias: 'i',
+      type: 'array',
+      description: 'Filter rule ids to the output (can be a JS file that exports an array of rule ids)',
+      coerce: coerceRules
+    },
     exclude: {
       alias: 'e',
       type: 'array',
-      description: 'Exclude rules from the output (can be a JS file that exports an array)',
-      coerce: rules => _.flatten(rules.map((rule) => {
-        if (rule.endsWith('.js')) {
-          const file = path.resolve(rule)
-          const stats = fs.statSync(file)
-          if (stats && stats.isFile()) {
-            const module = require(file)
-            return _.isArray(module) || _.isString(module) ? module : rule
-          } else {
-            return rule
-          }
-        } else {
-          return rule
-        }
-      }))
+      description: 'Reject rule ids from the output (can be a JS file that exports an array of rule ids)',
+      coerce: coerceRules
     }
   })
   .recommendCommands()
@@ -77,6 +88,7 @@ const argv = yargs.usage('Usage: $0 <file> [options]')
 
 module.exports = {
   file: _.first(argv._),
+  include: argv.include,
   exclude: argv.exclude,
   groups: argv.groups,
   status: argv.status,

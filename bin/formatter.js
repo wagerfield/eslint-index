@@ -16,7 +16,8 @@ function formatKey(key, prefix) {
 
 function formatList(rules, showDocs) {
   let ruleDocsUrl = '', formattedRule = ''
-  const maxRuleIdLength = _.maxBy(rules, rule => rule.id.length).id.length
+  const ruleWithMaxLength = _.maxBy(rules, rule => rule.id.length)
+  const maxRuleIdLength = ruleWithMaxLength ? ruleWithMaxLength.id.length : 0
   return rules.map((rule) => {
     formattedRule = _.padEnd(rule.id, maxRuleIdLength)
     formattedRule = formatColor(formattedRule, rule.status)

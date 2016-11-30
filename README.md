@@ -23,7 +23,8 @@ Option      | Alias | Description                  | Arg Type        | Arg Optio
 `--format`  | `-f`  | Format rules                 | `String`        | `list|table|count`
 `--status`  | `-s`  | Filter rules by status       | `Array<String>` | `omitted|off|warn|error`
 `--groups`  | `-g`  | Filter rules by group/plugin | `Array<String>` | `eslint|plugin eg. react`
-`--exclude` | `-e`  | Exclude rules from output    | `Array<String>` | `rule-id-one rule-id-two`
+`--include` | `-i`  | Filter rules by id           | `Array<String>` | `rule-id-one rule-id-two`
+`--exclude` | `-e`  | Reject rules by id           | `Array<String>` | `rule-id-one rule-id-two`
 
 ## Examples
 
@@ -35,6 +36,7 @@ eslint-index .eslintrc --status warn error
 eslint-index .eslintrc --groups eslint react
 eslint-index .eslintrc --groups eslint --status warn error
 eslint-index .eslintrc --groups eslint --status warn error --format count
+eslint-index .eslintrc --include semi curly
 eslint-index .eslintrc --exclude semi curly
 eslint-index .eslintrc --docs
 eslint-index .eslintrc --docs --groups eslint react

@@ -22,7 +22,13 @@ statusFilter = statusFilter.length ? statusFilter : Constants.STATUS_KEYS
 const filteredRules = allRules.filter((rule) => {
   let include = _.includes(groupFilter, rule.group)
   include = include && _.includes(statusFilter, rule.status)
-  return include && !_.includes(Args.exclude, rule.id)
+  if (_.isArray(Args.include)) {
+    include = include && _.includes(Args.include, rule.id)
+  }
+  if (_.isArray(Args.exclude)) {
+    include = include && !_.includes(Args.exclude, rule.id)
+  }
+  return include
 })
 
 /* eslint-disable no-console */
