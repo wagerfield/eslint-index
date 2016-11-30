@@ -343,9 +343,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-supermind@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-supermind/-/eslint-config-supermind-0.8.0.tgz#2666196b2fac2a5c664a3a0fe6f8e356c35ffc4f"
+eslint-config-supermind@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-supermind/-/eslint-config-supermind-0.9.0.tgz#1e5b8dbec10fc64ea87ae3a3cc2e70eadfca4ab2"
   dependencies:
     babel-eslint "^7.1.1"
     eslint "^3.11.1"
@@ -404,45 +404,6 @@ eslint-plugin-react@^6.7.1:
   dependencies:
     doctrine "^1.2.2"
     jsx-ast-utils "^1.3.3"
-
-eslint@^3.11.0:
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.11.0.tgz#41d34f8b3e69949beee5c097ff4e75ad13ba2d00"
-  dependencies:
-    babel-code-frame "^6.16.0"
-    chalk "^1.1.3"
-    concat-stream "^1.4.6"
-    debug "^2.1.1"
-    doctrine "^1.2.2"
-    escope "^3.6.0"
-    espree "^3.3.1"
-    estraverse "^4.2.0"
-    esutils "^2.0.2"
-    file-entry-cache "^2.0.0"
-    glob "^7.0.3"
-    globals "^9.2.0"
-    ignore "^3.2.0"
-    imurmurhash "^0.1.4"
-    inquirer "^0.12.0"
-    is-my-json-valid "^2.10.0"
-    is-resolvable "^1.0.0"
-    js-yaml "^3.5.1"
-    json-stable-stringify "^1.0.0"
-    levn "^0.3.0"
-    lodash "^4.0.0"
-    mkdirp "^0.5.0"
-    natural-compare "^1.4.0"
-    optionator "^0.8.2"
-    path-is-inside "^1.0.1"
-    pluralize "^1.2.1"
-    progress "^1.1.8"
-    require-uncached "^1.0.2"
-    shelljs "^0.7.5"
-    strip-bom "^3.0.0"
-    strip-json-comments "~1.0.1"
-    table "^3.7.8"
-    text-table "~0.2.0"
-    user-home "^2.0.0"
 
 eslint@^3.11.1:
   version "3.11.1"
