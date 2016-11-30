@@ -33,9 +33,9 @@ function formatCount(rules) {
   return rules.length
 }
 
-function formatTable(rules) {
-  const RULES_KEY = 'rules'
-  const columns = [ RULES_KEY ].concat(Constants.STATUS_KEYS)
+function formatTable(rules, statusFilter) {
+  const RULES_KEY = 'total'
+  const columns = [ RULES_KEY ].concat(statusFilter)
 
   // Calculate column width
   const width = columns.reduce((result, key) =>

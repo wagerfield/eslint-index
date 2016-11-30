@@ -21,7 +21,9 @@ statusFilter = statusFilter.length ? statusFilter : Constants.STATUS_KEYS
 
 const filteredRules = allRules.filter((rule) => {
   let include = _.includes(groupFilter, rule.group)
-  include = include && _.includes(statusFilter, rule.status)
+  if (Args.format !== Constants.FORMAT_TABLE) {
+    include = include && _.includes(statusFilter, rule.status)
+  }
   if (_.isArray(Args.include)) {
     include = include && _.includes(Args.include, rule.id)
   }
@@ -38,7 +40,7 @@ switch (Args.format) {
     console.log(Formatter.formatCount(filteredRules))
     break
   case Constants.FORMAT_TABLE:
-    console.log(Formatter.formatTable(filteredRules))
+    console.log(Formatter.formatTable(filteredRules, statusFilter))
     break
   default:
     console.log(Formatter.formatKey(Constants.STATUS_COLORS, 'key:'))
