@@ -1,11 +1,11 @@
 const _ = require('lodash')
 
-exports.FORMAT_COUNT = 'count'
+exports.FORMAT_NUMBER = 'number'
 exports.FORMAT_TABLE = 'table'
 exports.FORMAT_LIST = 'list'
 exports.FORMATS = [
   exports.FORMAT_LIST,
-  exports.FORMAT_COUNT,
+  exports.FORMAT_NUMBER,
   exports.FORMAT_TABLE
 ]
 

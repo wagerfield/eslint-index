@@ -36,8 +36,8 @@ const filteredRules = allRules.filter((rule) => {
 /* eslint-disable no-console */
 
 switch (Args.format) {
-  case Constants.FORMAT_COUNT:
-    console.log(Formatter.formatCount(filteredRules))
+  case Constants.FORMAT_NUMBER:
+    console.log(Formatter.formatNumber(filteredRules))
     break
   case Constants.FORMAT_TABLE:
     console.log(Formatter.formatTable(filteredRules, statusFilter))

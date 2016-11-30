@@ -27,8 +27,8 @@ function coerceRules(rules) {
 
 const argv = yargs.usage('Usage: $0 <file> [options]')
   .example('$0 .eslintrc', 'List all available rules')
-  .example('$0 .eslintrc --format count', 'Output the number of rules')
-  .example('$0 .eslintrc --format table', 'Output rule status counts in a table')
+  .example('$0 .eslintrc --format number', 'Output the number of rules')
+  .example('$0 .eslintrc --format table', 'Output rule group and status numbers in a table')
   .example('$0 .eslintrc --groups eslint react', 'List all available rules for "eslint" and "react"')
   .example('$0 .eslintrc --status omitted off', 'List rules that have been turned "off" or "omitted"')
   .example('$0 .eslintrc --exclude curly semi', 'List all available rules excluding "curly" and "semi"')
@@ -49,7 +49,7 @@ const argv = yargs.usage('Usage: $0 <file> [options]')
       type: 'string',
       choices: Constants.FORMATS,
       default: Constants.FORMAT_LIST,
-      description: 'Format output as a list, table or count'
+      description: 'Format output as a list, table or number'
     },
     groups: {
       alias: 'g',

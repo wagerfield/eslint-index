@@ -29,7 +29,7 @@ function formatList(rules, showDocs) {
   }).join('\n')
 }
 
-function formatCount(rules) {
+function formatNumber(rules) {
   return rules.length
 }
 
@@ -73,7 +73,7 @@ function formatTable(rules, statusFilter) {
 }
 
 module.exports = {
-  formatCount,
+  formatNumber,
   formatTable,
   formatList,
   formatKey
