@@ -38,8 +38,17 @@ Alternatively, you can add `./node_modules/.bin` to your `$PATH`.
 This will allow you to use any node binaries within your project:
 
 ```
-cd some-project-with-eslint-index-installed
-eslint-index .eslintrc --format table
+» cd some-project-with-eslint-index-installed
+» which eslint-index
+./node_modules/.bin/eslint-index
+» eslint-index .eslintrc --format table
+┌──────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+│          │ total   │ omitted │ off     │ warn    │ error   │
+├──────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+│ eslint   │ 233     │ 0       │ 29      │ 2       │ 202     │
+├──────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+│ react    │ 53      │ 4       │ 0       │ 0       │ 49      │
+└──────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
 ```
 
 ## Options
