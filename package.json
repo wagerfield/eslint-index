@@ -21,11 +21,11 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "cli-table2": "^0.2.0",
-    "eslint": "^3.11.0",
+    "eslint": "^3.11.1",
     "lodash": "^4.17.2",
     "yargs": "^6.4.0"
   },
   "devDependencies": {
-    "eslint-config-supermind": "^0.7.0"
+    "eslint-config-supermind": "^0.8.0"
   }
 }
