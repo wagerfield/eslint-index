@@ -1,4 +1,4 @@
-# ESLint Index
+# ![ESLint][eslint-logo] ESLint Index
 
 > CLI for finding and managing rules in ESLint config files
 
@@ -82,3 +82,7 @@ eslint-index .eslintrc --groups eslint react --docs
 ## Author
 
 Matthew Wagerfield [@wagerfield](http://twitter.com/wagerfield)
+
+
+
+[eslint-logo]: assets/eslint-logo.svg
