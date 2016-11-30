@@ -85,4 +85,4 @@ Matthew Wagerfield [@wagerfield](http://twitter.com/wagerfield)
 
 
 
-[eslint-logo]: assets/eslint-logo.svg
+[eslint-logo]: assets/eslint-logo.png
