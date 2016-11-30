@@ -2,7 +2,12 @@
 
 > CLI for finding and managing rules in ESLint config files
 
+List all the rules!
+
 ![Demo 1][demo-1]
+
+Then count them, or create a pretty table!
+
 ![Demo 2][demo-2]
 
 ## Installation
