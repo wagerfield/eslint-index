@@ -33,7 +33,9 @@ It is recommended that you use it within your `package.json` scripts:
 }
 ```
 
-Alternatively, you can add `./node_modules/.bin` to your `$PATH`. This will allow you to use any node binaries within your project.
+Alternatively, you can add `./node_modules/.bin` to your `$PATH`.
+
+This will allow you to use any node binaries within your project:
 
 ```
 cd some-project-with-eslint-index-installed
