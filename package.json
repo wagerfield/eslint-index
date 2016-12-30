@@ -5,6 +5,15 @@
   "author": "Matthew Wagerfield <matthew@wagerfield.com>",
   "license": "MIT",
   "main": "bin/index.js",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslintplugin",
+    "eslintrules",
+    "config",
+    "plugin",
+    "rules"
+  ],
   "bin": {
     "eslint-index": "bin/index.js"
   },
