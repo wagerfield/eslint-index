@@ -9,6 +9,7 @@ exports.docs = {
   'backbone': addDocs('https://github.com/ilyavolodin/eslint-plugin-backbone/blob/master/docs/rules/', '.md'),
   'flowtype': addDocs('https://github.com/gajus/eslint-plugin-flowtype#'),
   'import': addDocs('https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/', '.md'),
+  'inferno': addDocs('https://github.com/infernojs/eslint-plugin-inferno/blob/master/docs/rules/', '.md'),
   'jasmine': addDocs('https://github.com/tlvince/eslint-plugin-jasmine/blob/master/docs/rules/', '.md'),
   'jsdoc': addDocs('https://github.com/gajus/eslint-plugin-jsdoc#'),
   'jsx-a11y': addDocs('https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/', '.md'),

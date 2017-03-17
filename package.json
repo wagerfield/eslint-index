@@ -1,6 +1,6 @@
 {
   "name": "eslint-index",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "CLI for finding and managing rules in ESLint config files",
   "author": "Matthew Wagerfield <matthew@wagerfield.com>",
   "license": "MIT",
@@ -35,6 +35,6 @@
     "yargs": "^6.4.0"
   },
   "devDependencies": {
-    "eslint-config-supermind": "^0.9.0"
+    "eslint-config-supermind": "^0.12.0"
   }
 }
