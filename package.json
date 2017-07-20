@@ -32,11 +32,11 @@
     "url": "git@github.com:wagerfield/eslint-index.git"
   },
   "dependencies": {
-    "chalk": "^1.1.3",
+    "chalk": "^2.0.1",
     "cli-table2": "^0.2.0",
-    "eslint": "^3.11.1",
-    "lodash": "^4.17.2",
-    "yargs": "^6.4.0"
+    "eslint": "^4.2.0",
+    "lodash": "^4.17.4",
+    "yargs": "^8.0.2"
   },
   "devDependencies": {
     "eslint-config-supermind": "^0.12.0"
