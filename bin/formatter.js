@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const chalk = require('chalk')
-const Table = require('cli-table2')
+const Table = require('cli-table3')
 const Constants = require('./constants')
 const Docs = require('./docs')
 
